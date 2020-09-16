@@ -10,9 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     var arrayUsuario = [Usuario]()
-    var isPrimeiroCadastro: Bool = true
     
-    @IBOutlet var uiView: UIView!
     @IBOutlet weak var labelEmailError: UILabel!
     @IBOutlet weak var labelSenhaError: UILabel!
     @IBOutlet weak var labelStatus: UILabel!
@@ -20,56 +18,100 @@ class ViewController: UIViewController {
     @IBOutlet weak var textFieldSenha: UITextField!
     @IBOutlet weak var buttonCadastro: UIButton!
     
+    
+
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         textFieldEmail.delegate = self
         textFieldSenha.delegate = self
-        buttonCadastro.isHidden = true
         labelEmailError.isHidden = true
         labelSenhaError.isHidden = true
         labelStatus.isHidden = true
     }
     
-    @IBAction func cadastroClick(_ sender: Any) {
-        var color = UIColor.white
-        let email = textFieldEmail.text!
-        let senha = textFieldSenha.text!
-        if buscarUsuario(email: email){
-            limparCampos()
-            color = UIColor.red
-            labelStatus.text = "Usuário já cadastrado."
-            labelStatus.isHidden = false
-            buttonCadastro.isHidden = true
-        }else{
-            cadastrarUsuario(email: email, senha: senha)
-            if !isPrimeiroCadastro{
-                color = UIColor.green
-            }
-            isPrimeiroCadastro = false
-            limparCampos()
-            labelStatus.text = "Cadastro efetuado com sucesso."
-            labelStatus.isHidden = false
-            buttonCadastro.isHidden = true
+    func showAlert(title: String, message: String){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        self.present(alertController, animated: true, completion: nil)
 
-        }
-        uiView.backgroundColor = color
     }
     
-    private func validaDados() -> Bool{
+    @IBAction func loginClick(_ sender: Any) {
+        
+        
+        if validaEmail() && validaSenha(){
+            let emailUsuario = textFieldEmail.text!
+            if buscarUsuario(email: emailUsuario){
+                let senhaUsuario = textFieldSenha.text!
+                if buscarUsuario(email: emailUsuario, senha: senhaUsuario){
+                    //login efetuado com sucesso
+                    limparCampos()
+                    showAlert(title: "Login Usuário", message: "Login efetuado com sucesso!")
+                }else{
+                    //senha inválida
+                    showAlert(title: "Login Usuário", message: "Senha inválida")
+
+                }
+            }else{
+                //Usuário não cadastrado
+                showAlert(title: "Login Usuário", message: "Usuário inválido")
+
+            }
+        }
+    }
+    
+    
+    @IBAction func cadastroClick(_ sender: Any) {
+        let email = textFieldEmail.text!
+        let senha = textFieldSenha.text!
+        
+        if validaEmail() && validaSenha(){
+            if buscarUsuario(email: email){
+                limparCampos()
+                showAlert(title: "Cadastro Usuário", message: "Usuário já cadastrado.")
+            }else{
+                cadastrarUsuario(email: email, senha: senha)
+                showAlert(title: "Cadastro Usuário", message: "Cadastro efetuado com sucesso.")
+                limparCampos()
+            }
+        }
+        
+    }
+    
+    private func validaEmail() -> Bool{
         labelEmailError.isHidden = true
-        labelSenhaError.isHidden = true
         if textFieldEmail.text == nil || textFieldEmail.text!.isEmpty{
             labelEmailError.isHidden = false
-            return false
-        }
-        else if textFieldSenha.text == nil || textFieldSenha.text!.isEmpty{
-            labelSenhaError.isHidden = false
             return false
         }
         return true
     }
     
+    private func validaSenha() -> Bool{
+        labelSenhaError.isHidden = true
+        if textFieldSenha.text == nil || textFieldSenha.text!.isEmpty{
+            labelSenhaError.isHidden = false
+            return false
+        }
+        return true
+
+    }
+    
+    private func buscarUsuario(email: String, senha: String) -> Bool{
+        for usuario in arrayUsuario{
+            if usuario.getEmail() == email{
+                if usuario.getSenha() == senha {
+                    return true
+                }
+                return false
+            }
+        }
+        return false
+    }
+        
     private func buscarUsuario(email: String) -> Bool{
         for usuario in arrayUsuario{
             if usuario.getEmail() == email{
@@ -88,19 +130,24 @@ class ViewController: UIViewController {
         textFieldEmail.text = ""
         textFieldSenha.text = ""
     }
-
+    
 
 }
+
 
 extension ViewController: UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool{
         // called when 'return' key pressed. return NO to ignore.
         if textField == textFieldEmail{
+            if validaEmail(){
                 textFieldSenha.becomeFirstResponder()
+            }
         }else{
-            if validaDados(){
+            if !validaEmail(){
+                textFieldEmail.becomeFirstResponder()
+            }
+            else if validaSenha(){
                 textField.resignFirstResponder()
-                buttonCadastro.isHidden = false
             }
             
         }
