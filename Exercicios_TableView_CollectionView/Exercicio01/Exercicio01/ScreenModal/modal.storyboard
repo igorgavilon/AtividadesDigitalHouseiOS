@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hqg-YI-LUs">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Modal View Controller-->
+        <scene sceneID="0fL-Ck-g2Q">
+            <objects>
+                <viewController id="hqg-YI-LUs" customClass="modalViewController" customModule="Exercicio01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Axa-iG-kEt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p3g-sr-G1p">
+                                <rect key="frame" x="16" y="261" width="382" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AuN-Qd-dSt">
+                                <rect key="frame" x="179" y="132" width="61" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="Close:" destination="hqg-YI-LUs" eventType="touchUpInside" id="L5A-x6-CJP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MT5-E9-EN4" firstAttribute="trailing" secondItem="AuN-Qd-dSt" secondAttribute="trailing" constant="174" id="1cs-8C-h3V"/>
+                            <constraint firstItem="AuN-Qd-dSt" firstAttribute="top" secondItem="MT5-E9-EN4" secondAttribute="top" constant="88" id="8H6-ch-7Rc"/>
+                            <constraint firstItem="p3g-sr-G1p" firstAttribute="leading" secondItem="MT5-E9-EN4" secondAttribute="leading" constant="16" id="Jo4-ii-dpG"/>
+                            <constraint firstItem="AuN-Qd-dSt" firstAttribute="leading" secondItem="MT5-E9-EN4" secondAttribute="leading" constant="179" id="Szk-D3-WNx"/>
+                            <constraint firstItem="p3g-sr-G1p" firstAttribute="top" secondItem="AuN-Qd-dSt" secondAttribute="bottom" constant="99" id="Yf9-mz-zzu"/>
+                            <constraint firstItem="p3g-sr-G1p" firstAttribute="leading" secondItem="MT5-E9-EN4" secondAttribute="leading" constant="16" id="dum-2a-6qB"/>
+                            <constraint firstItem="MT5-E9-EN4" firstAttribute="trailing" secondItem="p3g-sr-G1p" secondAttribute="trailing" constant="16" id="igH-aj-Qsn"/>
+                            <constraint firstItem="MT5-E9-EN4" firstAttribute="trailing" secondItem="p3g-sr-G1p" secondAttribute="trailing" constant="16" id="kVV-MC-FP5"/>
+                            <constraint firstItem="p3g-sr-G1p" firstAttribute="top" secondItem="AuN-Qd-dSt" secondAttribute="bottom" constant="99" id="y5b-65-JVU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MT5-E9-EN4"/>
+                    </view>
+                    <connections>
+                        <outlet property="labelNameModal" destination="p3g-sr-G1p" id="MdF-7G-jUJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EuO-7q-PBm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111.59420289855073" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>

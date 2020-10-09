@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ihp-M4-rXx">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pushed View Controller-->
+        <scene sceneID="NxH-Gt-YCL">
+            <objects>
+                <viewController id="Ihp-M4-rXx" customClass="PushedViewController" customModule="Exercicio03" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dpW-50-FZs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Odo-nN-G0j">
+                                <rect key="frame" x="16" y="295" width="382" height="263"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Odo-nN-G0j" firstAttribute="leading" secondItem="XOo-cB-KVS" secondAttribute="leading" constant="16" id="02K-zx-ghA"/>
+                            <constraint firstItem="Odo-nN-G0j" firstAttribute="top" secondItem="XOo-cB-KVS" secondAttribute="top" constant="251" id="YGq-kv-dSm"/>
+                            <constraint firstItem="XOo-cB-KVS" firstAttribute="trailing" secondItem="Odo-nN-G0j" secondAttribute="trailing" constant="16" id="an8-ck-jdQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XOo-cB-KVS"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Odo-nN-G0j" id="FGe-La-tK9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0fS-Xx-Xje" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86.956521739130437" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+</document>

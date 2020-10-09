@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Exercicio01" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="T4f-xe-qoc">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="xIB-cQ-z9S"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="PessoaTableViewCell" rowHeight="164" id="qQs-79-91M" customClass="PessoaTableViewCell" customModule="Exercicio01" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="164"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qQs-79-91M" id="KR8-mK-VSO">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="164"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aan-xe-UdC">
+                                                    <rect key="frame" x="36" y="72" width="342" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I57-Nj-6iX">
+                                                    <rect key="frame" x="36" y="119" width="342" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uIQ-5p-SkT">
+                                                    <rect key="frame" x="36" y="26" width="342" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Aan-xe-UdC" secondAttribute="trailing" constant="16" id="9fc-yw-9F9"/>
+                                                <constraint firstItem="uIQ-5p-SkT" firstAttribute="leading" secondItem="KR8-mK-VSO" secondAttribute="leadingMargin" constant="16" id="Mv4-3R-AZJ"/>
+                                                <constraint firstItem="uIQ-5p-SkT" firstAttribute="top" secondItem="KR8-mK-VSO" secondAttribute="topMargin" constant="15" id="Wn5-Dg-p6a"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="I57-Nj-6iX" secondAttribute="bottom" constant="13.5" id="b7B-Uj-FUy"/>
+                                                <constraint firstItem="Aan-xe-UdC" firstAttribute="leading" secondItem="KR8-mK-VSO" secondAttribute="leadingMargin" constant="16" id="g7W-Gh-SdN"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="I57-Nj-6iX" secondAttribute="trailing" constant="16" id="kC9-qr-eIF"/>
+                                                <constraint firstItem="Aan-xe-UdC" firstAttribute="top" secondItem="uIQ-5p-SkT" secondAttribute="bottom" constant="25" id="ksA-PM-WqK"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="uIQ-5p-SkT" secondAttribute="trailing" constant="16" id="ly5-UW-Lfe"/>
+                                                <constraint firstItem="I57-Nj-6iX" firstAttribute="leading" secondItem="KR8-mK-VSO" secondAttribute="leadingMargin" constant="16" id="rMK-ww-KiN"/>
+                                                <constraint firstItem="I57-Nj-6iX" firstAttribute="top" secondItem="Aan-xe-UdC" secondAttribute="bottom" constant="26" id="zyB-yP-wJH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelCargo" destination="Aan-xe-UdC" id="EQb-NB-tGC"/>
+                                            <outlet property="labelEmail" destination="I57-Nj-6iX" id="eZK-rm-JOU"/>
+                                            <outlet property="labelName" destination="uIQ-5p-SkT" id="3Vp-6U-8n8"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="T4f-xe-qoc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="EYN-X2-oCD"/>
+                            <constraint firstItem="T4f-xe-qoc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Nkw-xo-b9i"/>
+                            <constraint firstItem="T4f-xe-qoc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="SO2-Kp-TdB"/>
+                            <constraint firstItem="T4f-xe-qoc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SsZ-wK-hCN"/>
+                            <constraint firstItem="T4f-xe-qoc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="V9j-NT-iqv"/>
+                            <constraint firstItem="T4f-xe-qoc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dd0-Uu-xgH"/>
+                            <constraint firstItem="T4f-xe-qoc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="y1g-jM-EqH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableViewPessoa" destination="T4f-xe-qoc" id="BHm-CZ-Gv7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="106.47321428571428"/>
+        </scene>
+    </scenes>
+</document>
