@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IkT-4D-LSQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Categorias View Controller-->
+        <scene sceneID="35X-aq-zQx">
+            <objects>
+                <viewController id="IkT-4D-LSQ" customClass="CategoriasViewController" customModule="ProjetoIntegradorTestesAPI_fda" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IjY-dZ-6hZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOME" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVZ-xc-9gy">
+                                <rect key="frame" x="20" y="155" width="374" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" red="0.34147885410000001" green="0.23641201519999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Fa-vp-Wae">
+                                <rect key="frame" x="0.0" y="203" width="414" height="659"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MENU | MINHA LISTA | BUSCA | CONFIG" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucl-il-Ndt">
+                                        <rect key="frame" x="20" y="54" width="374" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KNw-qc-KA9">
+                                        <rect key="frame" x="265" y="230" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.58157816750000002" green="0.69690243269999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="genéricos">
+                                            <color key="titleColor" red="0.34147885410000001" green="0.23641201519999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="genericosAction:" destination="IkT-4D-LSQ" eventType="touchUpInside" id="xfn-Ox-xOp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMn-xo-eEQ">
+                                        <rect key="frame" x="51" y="230" width="100" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.58157816750000002" green="0.69690243269999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <state key="normal" title="laboratório">
+                                            <color key="titleColor" red="0.34147885410000001" green="0.23641201519999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="laboratorioAction:" destination="IkT-4D-LSQ" eventType="touchUpInside" id="6YO-O5-VMY"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUSCA POR CATEGORIA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9nG-pV-qHj">
+                                        <rect key="frame" x="20" y="168" width="374" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemBackgroundColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.34147885410000001" green="0.23641201519999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="ucl-il-Ndt" firstAttribute="leading" secondItem="7Fa-vp-Wae" secondAttribute="leading" constant="20" id="2Ae-mg-uon"/>
+                                    <constraint firstAttribute="trailing" secondItem="ucl-il-Ndt" secondAttribute="trailing" constant="20" id="4Ed-eW-Hbz"/>
+                                    <constraint firstItem="9nG-pV-qHj" firstAttribute="top" secondItem="ucl-il-Ndt" secondAttribute="bottom" constant="93" id="TDc-Cx-Cms"/>
+                                    <constraint firstItem="ucl-il-Ndt" firstAttribute="top" secondItem="7Fa-vp-Wae" secondAttribute="top" constant="54" id="UUS-7x-iy4"/>
+                                    <constraint firstAttribute="trailing" secondItem="9nG-pV-qHj" secondAttribute="trailing" constant="20" id="eLi-Iz-75q"/>
+                                    <constraint firstItem="9nG-pV-qHj" firstAttribute="leading" secondItem="7Fa-vp-Wae" secondAttribute="leading" constant="20" id="mkk-9Q-mxX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HpA-Q3-EwC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HpA-Q3-EwC" firstAttribute="trailing" secondItem="SVZ-xc-9gy" secondAttribute="trailing" constant="20" id="2SO-MN-PUG"/>
+                            <constraint firstItem="SVZ-xc-9gy" firstAttribute="leading" secondItem="HpA-Q3-EwC" secondAttribute="leading" constant="20" id="8E5-UC-sIZ"/>
+                            <constraint firstItem="7Fa-vp-Wae" firstAttribute="trailing" secondItem="HpA-Q3-EwC" secondAttribute="trailing" id="JnO-K3-5wa"/>
+                            <constraint firstItem="SVZ-xc-9gy" firstAttribute="top" secondItem="HpA-Q3-EwC" secondAttribute="top" constant="111" id="cGf-lI-yJG"/>
+                            <constraint firstItem="7Fa-vp-Wae" firstAttribute="bottom" secondItem="HpA-Q3-EwC" secondAttribute="bottom" id="eCZ-ma-WKX"/>
+                            <constraint firstItem="7Fa-vp-Wae" firstAttribute="top" secondItem="SVZ-xc-9gy" secondAttribute="bottom" constant="25" id="jlB-Rg-hyi"/>
+                            <constraint firstItem="7Fa-vp-Wae" firstAttribute="leading" secondItem="HpA-Q3-EwC" secondAttribute="leading" id="yLi-Rh-cPM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="buttonGenericos" destination="KNw-qc-KA9" id="n3N-Hn-uS6"/>
+                        <outlet property="buttonLaboratorio" destination="XMn-xo-eEQ" id="x22-2K-luY"/>
+                        <outlet property="viewMenu" destination="7Fa-vp-Wae" id="Hrs-w5-lcU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zdm-zf-2lt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="220"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
